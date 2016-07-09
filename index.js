@@ -11,12 +11,12 @@ const readir = initial => new Promise((resolve, reject) => {
 
     let remaining = result.length
 
-    const check = () => !remaining && resolve(results)
+    const check = () => !remaining && resolve(files)
 
     const update = toAdd => {
       Array.isArray(toAdd)
-        ? results = results.concat(toAdd)
-        : results.push(toAdd)
+        ? files = files.concat(toAdd)
+        : files.push(toAdd)
 
       remaining -= 1
       check()
