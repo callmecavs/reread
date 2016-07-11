@@ -2,9 +2,7 @@
 
 [![reread on NPM](https://img.shields.io/npm/v/reread.svg?style=flat-square)](https://www.npmjs.com/package/reread)
 
-Recursively read paths to all files within a folder and its subfolders.
-
-Returns a `Promise`.
+Recursively read paths to all files within a folder and its subfolders. Returns a `Promise`.
 
 ## Usage
 
