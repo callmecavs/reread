@@ -7,11 +7,13 @@ const reread = initial => new Promise((resolve, reject) => {
   let files = []
 
   fs.readdir(initial, (error, result) => {
-    if(error) reject(error)
+    if(error) return reject(error)
 
     let remaining = result.length
 
-    const check = () => !remaining && resolve(files)
+    const check = () => {
+      if(!remaining) return resolve(files)
+    }
 
     const update = toAdd => {
       Array.isArray(toAdd)
@@ -28,7 +30,7 @@ const reread = initial => new Promise((resolve, reject) => {
       const location = path.join(initial, item)
 
       fs.stat(location, (error, details) => {
-        if(error) reject(error)
+        if(error) return reject(error)
 
         details.isDirectory()
           ? reread(location).then(update).catch(reject)

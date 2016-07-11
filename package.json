@@ -2,7 +2,7 @@
   "name":        "reread",
   "description": "Recursively read paths to all files within a folder and its subfolders.",
 
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
 
   "engines": {
