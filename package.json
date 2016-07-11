@@ -1,13 +1,13 @@
 {
   "name":        "reread",
-  "description": "A Promise-based module for recursively reading paths to all files within a folder and its subfolders.",
+  "description": "Recursively read paths to all files within a folder and its subfolders.",
 
   "version": "0.0.1",
   "license": "MIT",
 
   "repository": "callmecavs/reread",
 
-  "author":  {
+  "author": {
     "name":  "Michael Cavalea",
     "email": "callmecavs@gmail.com",
     "url":   "http://callmecavs.com/"
