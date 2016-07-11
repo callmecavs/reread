@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const readir = initial => new Promise((resolve, reject) => {
+const reread = initial => new Promise((resolve, reject) => {
   let files = []
 
   fs.readdir(initial, (error, result) => {
@@ -31,11 +31,11 @@ const readir = initial => new Promise((resolve, reject) => {
         if(error) reject(error)
 
         details.isDirectory()
-          ? readir(location).then(update).catch(reject)
+          ? reread(location).then(update).catch(reject)
           : update(location)
       })
     })
   })
 })
 
-module.exports = readir
+module.exports = reread
