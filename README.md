@@ -8,7 +8,7 @@ Returns a `Promise`.
 
 ## Usage
 
-```
+```es6
 const reread = require('reread')
 
 reread('some/path')
