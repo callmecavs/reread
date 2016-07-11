@@ -4,6 +4,12 @@
 
 Recursively read paths to all files within a folder and its subfolders. Returns a `Promise`.
 
+## Install
+
+```
+npm i reread --save
+```
+
 ## Usage
 
 ```es6
